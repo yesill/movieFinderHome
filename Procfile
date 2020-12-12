@@ -1,1 +1,1 @@
-web:gunicorn moviefinderhome:app
+web: gunicorn --bind 0.0.0.0:$PORT moviefinderhome:app
