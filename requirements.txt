@@ -84,7 +84,7 @@ pyrsistent==0.17.3
 PyScreeze==0.1.26
 PySimpleSOAP==1.16.2
 pysmbc==1.0.15.6
-python-apt===1.8.4.1pardus1
+python-apt===1.8.4.1
 python-dateutil==2.7.3
 python-debian==0.1.35
 python-debianbts==2.8.2
