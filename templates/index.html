@@ -7,12 +7,145 @@
 <body>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+* {
+  box-sizing: border-box;
+}
+
+.openBtn {
+  background: #f1f1f1;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.openBtn:hover {
+  background: #bbb;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+}
+
+.overlay-content {
+  position: relative;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: white;
+}
+.overlay .closebtn:hover {
+  color: #ccc;
+}
+.overlay input[type=text] {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: white;
+}
+.overlay input[type=text]:hover {
+  background: #f1f1f1;
+}
+.overlay button {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.overlay button:hover {
+  background: #bbb;
+}
+/* customizable snowflake styling */
+.snowflake {
+  color: #fff;
+  font-size: 1em;
+  font-family: Arial;
+  text-shadow: 0 0 1px #000;
+}
+
+@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%{-webkit-transform:translateX(0px);transform:translateX(0px)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}100%{-webkit-transform:translateX(0px);transform:translateX(0px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%{transform:translateX(0px)}50%{transform:translateX(80px)}100%{transform:translateX(0px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}
+/* Demo Purpose Only*/
+.demo {
+  font-family: 'Raleway', sans-serif;
+	color:#fff;
+    display: block;
+    margin: 0 auto;
+    padding: 15px 0;
+    text-align: center;
+}
+.demo a{
+  font-family: 'Raleway', sans-serif;
+color: #000;		
+}
+ul {overflow:hidden;}
+ul li {float:left; margin-right:20px;}
+ul li img {border:1px solid #000;}
+.clear {clear: both}
 body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 .w3-bar-block .w3-bar-item {padding:20px}
 </style>
 <body>
-<!-- Sidebar (hidden by default) -->
+  <!-- this is make it snow!!! -->
+
+  <div class="snowflakes" aria-hidden="true">
+    <div class="snowflake">
+    ❅
+    </div>
+    <div class="snowflake">
+    ❅
+    </div>
+    <div class="snowflake">
+    ❆
+    </div>
+    <div class="snowflake">
+    ❄
+    </div>
+    <div class="snowflake">
+    ❅
+    </div>
+    <div class="snowflake">
+    ❆
+    </div>
+    <div class="snowflake">
+    ❄
+    </div>
+    <div class="snowflake">
+    ❅
+    </div>
+    <div class="snowflake">
+    ❆
+    </div>
+    <div class="snowflake">
+    ❄
+    </div>
+  </div>
+
+<!-- Sidebar -->
 <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()"
   class="w3-bar-item w3-button">Close it up</a>
@@ -25,13 +158,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 <div class="w3-top">
   <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
     <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
-    <div class="w3-right w3-padding-16">Contact(s)</div>
+    <div class="w3-right w3-padding-16" onclick="ac_close()">Contacts</div>
+  <!-- <div class="w3-right w3-padding-16">Contact(s)</div>-->
     <div class="w3-center w3-padding-16">MFhome</div>
   </div>
 </div>
 <!-- !PAGE CONTENT! -->
 <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
-
   <!-- First Photo Grid-->
   <div class="w3-row-padding w3-padding-16 w3-center" id="movies">
     <div class="w3-quarter">
@@ -63,15 +196,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       <h3>Spirited Away</h3>
       <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
     </div>
-    
     <div class="w3-quarter">
-      <img src="https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY268_CR3,0,182,268_AL_.jpg" alt="Salmon" style="width:100%">
+      <img src="https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY268_CR3,0,182,268_AL_.jpg" alt="Godfather" style="width:100%">
       <h3>Godfather</h3>
       <p>good farter hehe some random text to lorem lorem lorem lorem ipsum text.</p>
     </div>
     <div class="w3-quarter">
       <img src="https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="Lord Of The Rings" style="width:100%">
-      <h3>The Perfect Sandwich, A Real Classic</h3>
+      <h3>The Lord of The Rings</h3>
       <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
     </div>
     <div class="w3-quarter">
@@ -89,49 +221,70 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
       <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
       <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»-</a>
     </div>
   </div>
 
-<!-- 
   <hr id="series">
- <h5><b>Directors</b></h5>
-  <div class="w3-container w3-padding-32 w3-center">  
-    <h3>Some of our Personal favourites, respect to all, of course.</h3><br>
-    <img src="https://secureservercdn.net/198.71.233.51/fm7.e3a.myftpupload.com/wp-content/uploads/2020/09/Tarkovsky-750x400.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+ <h5><b>Series</b></h5>
+ <ul>
+    <li> <img src="https://m.media-amazon.com/images/M/MV5BNmZlYzIzMTItY2EzYS00YTEyLTg0ZjEtMDMzZjM3ODdhN2UzXkEyXkFqcGdeQXVyNjI0MDg2NzE@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="Planet Earth" style="display:block;margin:auto" width="120" height="180">
     <div class="w3-padding-32">
-      <h6><b>Tarkovsky, Andrei</b></h6>
-      <p></p>
-    <img src="https://www4.pictures.zimbio.com/gi/Wes+Anderson+Alternative+Views+10th+Rome+Film+n3srG86SVIol.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+      <h6><b>Planet Earth</b></h6>
+    </li>
+    <li>
+    <img src="https://images-na.ssl-images-amazon.com/images/I/61DtsGde--L._SL1500_.jpg" alt="Me" style="display:block;margin:auto" width="120" height="180">
         <div class="w3-padding-32">
-      <h6><b>Anderson, Wes</b></h6>
-      <p></p>
-    </div>
-  <hr>
--->
+      <h6><b>The Office</b></h6>
+        </li>
+    <li>
+      <img src="https://m.media-amazon.com/images/M/MV5BZGQ2YmMxZmEtYjI5OS00NzlkLTlkNTEtYWMyMzkyMzc2MDU5XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="Me" style="display:block;margin:auto" width="120" height="180">
+          <div class="w3-padding-32">
+        <h6><b>Chernobyl</b></h6>
+          </li>
+          <li>
+            <img src="https://postercim.net/wp-content/uploads/2020/06/six-feet-under-poster.jpg" alt="Me" style="display:block;margin:auto" width="120" height="180">
+                <div class="w3-padding-32">
+              <h6><b>Six Feet Under</b></h6>
+                </li>
+              <li> 
+          <img src="https://ujubu.files.wordpress.com/2020/10/asdas.jpeg?w=500" alt="Me" style="display:block;margin:auto" width="120" height="180">
+              <div class="w3-padding-32">
+            <h6><b>The Mandalorian</b></h6>
+              </li>
+             <li>
+            <img src="https://m.media-amazon.com/images/M/MV5BMWY2OTQwNWUtZWUxYy00OGUzLTkxMmYtNzE4ZTI0ZTBlYTU5XkEyXkFqcGdeQXVyMTA3OTEyODI1._V1_UY268_CR5,0,182,268_AL_.jpg" alt="Me" style="display:block;margin:auto" width="120" height="180">
+                <div class="w3-padding-32">
+              <h6><b>Hunter x Hunter</b></h6> 
+            </li>
+            <li>
+              <img src="https://m.media-amazon.com/images/M/MV5BZTk5OTQyZjYtMDk3Yy00YjhmLWE2MTYtZmY4NTg1YWUzZTQ0XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="Me" style="display:block;margin:auto" width="120" height="180">
+                <div class="w3-padding-32">
+              <h6><b>Cosmos: A Spacetime Odyssey</b></h6>
+            </li>
+</ul>
+</div>
+</hr>
 
 <!-- Directors section -->
  <hr id="directors">
  <h5><b>Directors</b></h5>
   <div class="w3-container w3-padding-32 w3-center">  
     <h3>Some of our Personal favourites, respect to all, of course.</h3><br>
-    <img src="https://secureservercdn.net/198.71.233.51/fm7.e3a.myftpupload.com/wp-content/uploads/2020/09/Tarkovsky-750x400.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+    <img src="https://secureservercdn.net/198.71.233.51/fm7.e3a.myftpupload.com/wp-content/uploads/2020/09/Tarkovsky-750x400.jpg" alt="Tarkovsky" class="w3-image" style="display:block;margin:auto" width="800" height="533">
     <div class="w3-padding-32">
       <h6><b>Tarkovsky, Andrei</b></h6>
-      <p></p>
-    <img src="https://www4.pictures.zimbio.com/gi/Wes+Anderson+Alternative+Views+10th+Rome+Film+n3srG86SVIol.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+    <img src="https://www4.pictures.zimbio.com/gi/Wes+Anderson+Alternative+Views+10th+Rome+Film+n3srG86SVIol.jpg" alt="Anderson" style="display:block;margin:auto" width="800" height="533">
         <div class="w3-padding-32">
       <h6><b>Anderson, Wes</b></h6>
-     <img= src="https://i.ebayimg.com/images/g/AiIAAOSwq4Rdd84v/s-l300.jpg" alt="Me" class="w3-image" style="display:block;margin:auto;" width="800" height="553">
-     <div class="w3-padding-32">
-       <h7><b>Tarantino, Quentin</b></h7>
-       <p></p>
+      <img src="https://homoliteratus.com/wp-content/uploads/2015/03/the-quentin-tarantino-50th-birthday-playlist-0-1.jpg" alt="Tarantino" style="display:block;margin:auto" width="800" height="533">
+          <div class="w3-padding-32">
+        <h6><b>Tarantino, Quentin</b></h6>
     </div>
-  <hr>
+  </hr>
 
+    <!-- About Section -->
   <hr id="about">
-
-  <!-- About Section -->
   <div class="w3-container w3-padding-32 w3-center">  
     <h3>About Website</h3><br>
     <img src="https://upload.wikimedia.org/wikipedia/tr/d/d0/Grand-Budapest-Hotel-02.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
@@ -140,38 +293,52 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       <p>This website is about suggest a movie. While pandemic, we tought that may help! and needed a project to pass the course though.</p>
     </div>
   <hr>
-  
-  <!-- Footer -->
-  <footer class="w3-row-padding w3-padding-32">
-    <div class="w3-third">
-  
-    <div class="w3-third w3-serif">
-      <h3>POPULAR TAGS</h3>
-      <p align="center">
-        <span class="w3-tag w3-black w3-margin-bottom">Drama</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Comedy</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Thriller</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Action</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Animation</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Crime</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cult</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Biography</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Horror</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Science Fiction</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Sitcom</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Soap Opera</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Anime</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Documentary</span>
-      </p>
-    </div>
-  </footer>
-
-<!-- 
-  <div class="w3-container">
-    <h2>Photo Card</h2>
-  
-    <div class="w3-card-4" style="width:50%">
-      <img src="https://m.hindustantimes.com/rf/image_size_1200x900/HT/p2/2020/04/30/Pictures/_70e9d6ee-8af0-11ea-8bae-d48e751bd032.jpeg" alt="Alps" style="width:100%">
-      <div class="w3-container w3-center">
-        <p>here's a card for you to look at it.</p>
-      </div>
--->
-
-<!-- End page content -->
+  <p>
+    <!--the code which is working -->
+    <span class="w3-tag w3-black w3-margin-bottom">Drama</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Comedy</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fantasy</span>
+    <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Action</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Animation</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Soap Opera</span>
+    <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cult</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Biography</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Mystery</span>
+    <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Science Fiction</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Sitcom</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Thriller</span>
+    <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Anime</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Documentary</span>
+  </p>
+</div>
+</footer>
 </div>
 
+
+<!-- amanin search button kodu 1 script -->
+
+<div id="myOverlay" class="overlay">
+  <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+  <div class="overlay-content">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Arayis.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+
+
+<p>Arama Tusuna tiklarsan ararsin.</p>
+<button class="openBtn" onclick="openSearch()">Arama tusu</button>
+
 <script>
+function openSearch() {
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function closeSearch() {
+  document.getElementById("myOverlay").style.display = "none";
+}
+// to open contacts
+
+function openContacts() {
+  document.getElementById("myContacts").style.display = "block";
+}
+function openContacts()
+{
+  document.getElementById("mycontacts").style.display = "none"; 
+}
 // Script to open and close sidebar
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
@@ -179,6 +346,130 @@ function w3_open() {
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
 }
+
+/* amanin search button kodu 1 script */
+
+/* mesela mesela search button
+
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.openBtn {
+  background: #f1f1f1;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.openBtn:hover {
+  background: #bbb;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+}
+
+.overlay-content {
+  position: relative;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: white;
+}
+
+.overlay .closebtn:hover {
+  color: #ccc;
+}
+
+.overlay input[type=text] {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: white;
+}
+
+.overlay input[type=text]:hover {
+  background: #f1f1f1;
+}
+
+.overlay button {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay button:hover {
+  background: #bbb;
+}
+</style>
+</head>
+<body>
+
+<div id="myOverlay" class="overlay">
+  <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+  <div class="overlay-content">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Arayis.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+
+<h2>Fullscreen Search</h2>
+<p>Click on the button to open the search box.</p>
+<button class="openBtn" onclick="openSearch()">Open Search Box</button>
+
+<script>
+  
+function openSearch() {
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function closeSearch() {
+  document.getElementById("myOverlay").style.display = "none";
+}
+/script>
+     
+body>
+html>
+
+
+*/ 
+
 </script>
 </body>
 </html>
