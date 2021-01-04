@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<title>MovieFinderHome</title>
+</head>
+<body>
+	
+	<div align="center">
+		<img src="{{film_poster}}">
+		<p align="center">{{film_name}}</p>
+		<p align="center">{{film_rate}}    {{film_director}}</p>
+		<p align="center">{{film_genre}}</p>
+
+<div class="bg-image img1"></div>
+<div class="bg-image img2"></div>
+<div class="bg-image img3"></div>
+<div class="bg-image img4"></div>
+<div class="bg-image img5"></div>
+<div class="bg-image img6"></div>
+<div class="bg-text">{{film_name}}</div>
+
+	
+	<style> 
+	body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+ 	.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+	.w3-third img:hover{opacity: 1}
+
+	body, html {
+  height: 300%;
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* Full */
+  height: 200%; 
+
+  /* merkez gorselindeki... aman*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Images used */
+/*<!-- $('a.class').css('background-image', 'url(' + $('a.class img').attr("{{film poster}}") + ')'); -->*/ 
+.img1 { background-image: url("{{film_poster}}"); }  
+/* https://i.pinimg.com/originals/59/56/d8/5956d896be12709b43fdcbfbd7bba669.png */
+/* https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfn04Ax5brbJsm9hEsbww4O_km0yCgC6yBaw&usqp=CAU */
+/* https://i.pinimg.com/originals/97/83/b9/9783b95511843d2ce655116e43acc954.jpg */
+/* https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.pinterest.com%2Fpin%2F414471971958851319%2F&psig=AOvVaw35Fgtnysak0wkMukXReEUs&ust=1609844263320000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNiL066Pgu4CFQAAAAAdAAAAABBj*/
+/*https://cdn11.bigcommerce.com/s-b72t4x/images/stencil/1280x1280/products/24537/107528/star-wars-poster-vader-propaganda__42447.1511201107.jpg?c=2*/
+.img2 { background-image: url("{{film_poster}}"); }
+.img3 { background-image: url("{{film_poster}}"); }
+.img4 { background-image: url("{{film_poster}}"); }
+.img5 { background-image: url("{{film_poster}}"); }
+.img6 { background-image: url("{{film_poster}}"); }
+
+/* tam ortadaki pozisyonu */
+
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback  */
+  background-color: rgba(0,0,0, 0.4); /* black w/opacity */
+  color: white;
+  font-weight: bold;
+  font-size: 80px;
+  border: 10px solid #f1f1f1;
+  position: fixed; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 600px;
+  padding: 30px;
+  text-align: center;
+}
+	</style>
+
+		
+		<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+		<!-- Sidebar/menu -->
+		<nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+		  <h3 class="w3-padding-64 w3-center"><b>MOVIEFINDERHOME SUNAR</b></h3>
+		  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+		  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">FİLM ÖNER!</a> 
+		  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">CONTACTS</a> 
+
+		</nav>
+		
+		<!-- Top menu on small screens -->
+		<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+		  <span class="w3-left w3-padding">SOME NAME</span>
+		  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+		</header>
+		
+		<!-- Overlay effect when opening sidebar on small screens -->
+		<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+		
+		<!-- !PAGE CONTENT! -->
+		<div class="w3-main" style="margin-left:300px">
+		
+		  <!-- Push down content on small screens --> 
+		  <div class="w3-hide-large" style="margin-top:83px"></div>
+		  
+		  <!-- Photo grid -->
+		  <div class="w3-row">
+			<div class="w3-third">
+			  <img src="https://i.pinimg.com/originals/39/3d/e1/393de1fe2a650f525eedd0092b49bff1.jpg" style="width:105%" onclick="onClick(this)">
+			  <img src="https://i.pinimg.com/originals/ea/13/fe/ea13fe49ab7a5153573380aa0ea20e63.jpg" style="width:107%" onclick="onClick(this)" >
+
+			</div>
+		
+			<div class="w3-third">
+			  <img src="https://forums.macrumors.com/attachments/c3po-jpg.506644/" style="width:100%" onclick="onClick(this)" >
+			  <img src="https://plexcollectionposters.com/images/2019/07/07/Star-Wars-Attack-of-the-Clones-2002-New-Logo8c53158864f60caf.png" style="width:100%" onclick="onClick(this)" >
+			  
+			</div>
+			
+
+			</div>
+		  </div>
+		
+		  
+		  <!-- Modal cunku yapmasam icimde kalirdi-->
+		  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+			<span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+			<div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+			  <img id="img01" class="w3-image">
+			  <p id="caption"></p>
+			</div>
+		  </div>
+		
+		  <!-- CONTACTS section -->
+		  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+			<h4><b>CONTACTS </b></h4>
+			<img src="https://m.media-amazon.com/images/M/MV5BNTFiODY1NDItODc1Zi00MjE2LTk0MzQtNjExY2I1NTU3MzdiXkEyXkFqcGdeQXVyNzU1NzE3NTg@._V1_CR0,45,480,270_AL_UX477_CR0,0,477,268_AL_.jpg" alt="Me" class="w3-image w3-padding-32" width="600" height="650">
+			<div class="w3-content w3-justify" style="max-width:600px">
+			  <h4>Projenin yapımında emeği geçen;</h4>
+			
+				  <p>Orhan Söğüt, 201813171806 </p>
+				  <p> Mehmet Uysal, 201713171039</p>
+				 <p>  Hasan Geniş, 201713171060 </p>
+				 <p>  Elif Mihrişah Can, 201813172011.</p>
+				<p>   Sistem programlama ödevimizi iletiyoruz. </p>
+				<p> çok teşekkürler.</p>
+			  
+			  <hr class="w3-opacity">
+		
+			
+					</li>
+				  </ul>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		
+
+		
+		  <!-- Footer -->
+		  <footer class="w3-container w3-padding-32 w3-grey">  
+			<div class="w3-row-padding">
+			  <div class="w3-third">
+				<h3>INFO</h3>  
+			  </div>
+			
+			  <div class="w3-third">
+				<ul class="w3-ul">
+				  <li class="w3-padding-16 w3-hover-black">
+					<img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
+					<form action="/">
+						<button type="submit">Ana sayfa</button>
+					  </form>
+					<img src="https://i.ytimg.com/vi/rIXUlGojad0/maxresdefault.jpg" style="width:20%" onclick="onClick(this)" style="width:20px">
+					<span class="w3-large"></span><br>*Geri Donus*
+				
+				</ul>
+			  </div>
+		
+			  <div class="w3-third">
+			
+				</p>
+			  </div>
+			</div>
+		  </footer>
+		  
+		
+		<!-- End page content -->
+		</div>
+		
+</body>
+</html>
+
+
+
+
+
+
+
+
