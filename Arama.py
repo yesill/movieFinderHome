@@ -4,11 +4,19 @@ from random import randint
 
 #search_text = ""
 class Arama():
+    #genres = []
     film_list = []
 
     def __init__(self):
         with open('imdb.pkl','rb') as input:
             self.film_list = pickle.load(input)
+        """
+        for i in film_list:
+            genre = i.genre.replace(' ','').split(',')
+            for i in genre:
+                if i not in self.genres:
+                    genres.append(i)
+        """
     
     def searchParametresiz(self):
         """
@@ -24,24 +32,10 @@ class Arama():
             Aranan film ismi filmler listesinde aynen varsa(tami tamina ayni olmali) aranan filmi obje olarak returnler.
             Aranan film ismi filmler listesinde yoksa 'False' returnler.
         """
-        search_text = search_text.lower()
         for film in self.film_list:
             if search_text in film.name:
                 return film
         return False
-    
-    def searchGenre(self,genre):
-        """
-            Parametre olarak String alir.
-            Aranan turdeki filmleri bir listeye atar. Bu listeden bir filmi, film objesi olarak returnler.
-        """
-        film_list = []
-        for film in self.film_list:
-            if genre in film.genre:
-                film_list.append(film)
-                        
-        rnd = randint(0,len(film_list)-1)
-        return film_list[rnd]
     
     def oneri(self,searched_film):
         """
@@ -56,6 +50,14 @@ class Arama():
         film_list = []
         film_list_same_genre = []
         for film in self.film_list:
+            """
+            if film.name != searched_film.name:
+                film_genres = film.genre.replace(' ','').split(',')
+                genre_counter = 0
+                for genre in searched_film_genres:
+                    if genre in film_genres:
+                        genre_counter += 1
+            """
             #ayni filmi onerme
             if film.name != searched_film.name:
                 if film.genre == searched_film.genre:
