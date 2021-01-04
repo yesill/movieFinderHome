@@ -167,19 +167,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
 
   <!-- Arama Butonu -->
-  <div class="overlay-content">
-      <p>Arama Tusuna tiklarsan ararsin.</p>  
-      <button class="openBtn" onclick="openSearch()">Arama tusu</button>
-  </div>
-  <!-- Arama cubugu version=Mehmet
-  <div class="overlay-content">
-    <form action="/search">
-      <input type="text" placeholder="Beğendiğiniz bir filmin adını girin..." name="search">
-      <button type="submit">Ara</button>
-    </form>
-  </div>
-  -->
-  <br>
+	<p>Arama Tusuna tiklarsan ararsin.</p>
+	<button class="openBtn" onclick="openSearch()">Arama tusu</button>
 
   <!-- First Photo Grid-->
   <div class="w3-row-padding w3-padding-16 w3-center" id="movies">
@@ -311,27 +300,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   <hr>
   <p>
     <!--the code which is working -->
-    <a href="/genre?genre=drama"><span class="w3-tag w3-black w3-margin-bottom">Drama</span></a>
-    <a href="/genre?genre=crime"><span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Crime</span></a>
-    <a href="/genre?genre=action"><span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Action</span></a>
-    <a href="/genre?genre=adventure"><span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Adventure</span></a>
-    <a href="/genre?genre=biography"><span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Biography</span></a>
-    <a href="/genre?genre=history"><span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">History</span></a>
-    <a href="/genre?genre=sci-fi"><span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Science Fiction</span></a>
-    <a href="/genre?genre=romance"><span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Romance</span></a>
-    <a href="/genre?genre=western"><span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Western</span></a>
-    <a href="/genre?genre=fantasy"><span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fantasy</span></a>
-    <a href="/genre?genre=comedy"><span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Comedy</span></a>
-    <a href="/genre?genre=thriller"><span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Thriller</span></a>
-    <a href="/genre?genre=animation"><span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Animation</span></a>
-    <a href="/genre?genre=family"><span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Family</span></a>
-    <a href="/genre?genre=war"><span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">War</span></a>
-    <a href="/genre?genre=mystery"><span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Mystery</span></a>
-    <a href="/genre?genre=music"><span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Music</span></a>
-    <a href="/genre?genre=horror"><span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Horror</span></a>
-    <a href="/genre?genre=musical"><span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Musical</span></a>
-    <a href="/genre?genre=film-noir"><span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Film-Noir</span></a>
-    <a href="/genre?genre=sport"><span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Sport</span></a>
+    <span class="w3-tag w3-black w3-margin-bottom">Drama</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Comedy</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fantasy</span>
+    <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Action</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Animation</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Soap Opera</span>
+    <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cult</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Biography</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Mystery</span>
+    <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Science Fiction</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Sitcom</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Thriller</span>
+    <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Anime</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Documentary</span>
   </p>
 </div>
 </footer>
@@ -339,15 +312,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 
 
 <!-- amanin search button kodu 1 script -->
+
 <div id="myOverlay" class="overlay">
   <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
   <div class="overlay-content">
-    <form action="/search">
-      <input type="text" placeholder="Beğendiğiniz bir filmin adını girin..." name="search">
-      <button type="submit"><i class="fa fa-search"></button>
+    <form action="/action_page.php">
+      <input type="text" placeholder="Arayis.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
     </form>
   </div>
 </div>
+
 <!--
 <p>Arama Tusuna tiklarsan ararsin.</p>
 <button class="openBtn" onclick="openSearch()">Arama tusu</button>
