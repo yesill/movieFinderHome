@@ -2,7 +2,7 @@
 <html>
 <title>MovieFinderHome</title>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -89,7 +89,7 @@
 }
 
 @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%{-webkit-transform:translateX(0px);transform:translateX(0px)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}100%{-webkit-transform:translateX(0px);transform:translateX(0px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%{transform:translateX(0px)}50%{transform:translateX(80px)}100%{transform:translateX(0px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}
-/* Demo Purpose Only*/
+
 .demo {
   font-family: 'Raleway', sans-serif;
 	color:#fff;
@@ -163,13 +163,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
     <div class="w3-center w3-padding-16">MFhome</div>
   </div>
 </div>
-<!-- !PAGE CONTENT! -->
+<!-- !PAGE CONTENT! yani degil demek. -->
 <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
-
   <!-- Arama Butonu -->
   <div class="overlay-content">
-      <p>Arama Tusuna tiklarsan ararsin.</p>  
-      <button class="openBtn" onclick="openSearch()">Arama tusu</button>
+      <!-- version.elif-->
+      <button class="openBtn" onclick="openSearch()">Film Öner!</button>
   </div>
   <!-- Arama cubugu version=Mehmet
   <div class="overlay-content">
@@ -240,13 +239,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       <a href="#" class="w3-bar-item w3-button w3-hover-black">»-</a>
     </div>
   </div>
-
-  <hr id="series">
- <h5><b>Series</b></h5>
- <ul>
-    <li> <img src="https://m.media-amazon.com/images/M/MV5BNmZlYzIzMTItY2EzYS00YTEyLTg0ZjEtMDMzZjM3ODdhN2UzXkEyXkFqcGdeQXVyNjI0MDg2NzE@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="Planet Earth" style="display:block;margin:auto" width="120" height="180">
-    <div class="w3-padding-32">
-      <h6><b>Planet Earth</b></h6>
+  <div class="w3-container w3-padding-32 w3-center">  
+    <hr id="series">
+   <h5><b>Series</b></h5>
+   <h11> </h11>
+   <h21> </h21>
+   <ul>
+      <li> 
+        <img src="https://m.media-amazon.com/images/M/MV5BNmZlYzIzMTItY2EzYS00YTEyLTg0ZjEtMDMzZjM3ODdhN2UzXkEyXkFqcGdeQXVyNjI0MDg2NzE@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="Planet Earth" style="display:block;margin:auto" width="120" height="180">
+      <div class="w3-padding-32">
+        <h6><b>Planet Earth</b></h6>
     </li>
     <li>
     <img src="https://images-na.ssl-images-amazon.com/images/I/61DtsGde--L._SL1500_.jpg" alt="Me" style="display:block;margin:auto" width="120" height="180">
@@ -273,17 +275,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
                 <div class="w3-padding-32">
               <h6><b>Hunter x Hunter</b></h6> 
             </li>
-            <li>
-              <img src="https://m.media-amazon.com/images/M/MV5BZTk5OTQyZjYtMDk3Yy00YjhmLWE2MTYtZmY4NTg1YWUzZTQ0XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="Me" style="display:block;margin:auto" width="120" height="180">
-                <div class="w3-padding-32">
-              <h6><b>Cosmos: A Spacetime Odyssey</b></h6>
-            </li>
+          
 </ul>
 </div>
 </hr>
 
 <!-- Directors section -->
- <hr id="directors">
+<div class="w3-container w3-padding-32 w3-center">  
+      <hr id="directors">
  <h5><b>Directors</b></h5>
   <div class="w3-container w3-padding-32 w3-center">  
     <h3>Some of our Personal favourites, respect to all, of course.</h3><br>
@@ -337,21 +336,20 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 </footer>
 </div>
 
-
 <!-- amanin search button kodu 1 script -->
 <div id="myOverlay" class="overlay">
   <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
   <div class="overlay-content">
     <form action="/search">
-      <input type="text" placeholder="Beğendiğiniz bir filmin adını girin..." name="search">
-      <button type="submit"><i class="fa fa-search"></button>
+      <input type="text" placeholder="Beğendiğiniz bir film adı girin..." name="search">
+      <button type="submit"><i class="fa  
+    
+        
     </form>
   </div>
 </div>
-<!--
-<p>Arama Tusuna tiklarsan ararsin.</p>
-<button class="openBtn" onclick="openSearch()">Arama tusu</button>
--->
+<button class="openBtn" onclick="openSearch()">Film Öner!</button>
+
 <script>
 function openSearch() {
   document.getElementById("myOverlay").style.display = "block";
@@ -380,7 +378,6 @@ function w3_close() {
 /* amanin search button kodu 1 script */
 
 /* mesela mesela search button
-
 <html>
 <head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -388,11 +385,9 @@ function w3_close() {
 body {
   font-family: Arial;
 }
-
 * {
   box-sizing: border-box;
 }
-
 .openBtn {
   background: #f1f1f1;
   border: none;
@@ -400,11 +395,9 @@ body {
   font-size: 20px;
   cursor: pointer;
 }
-
 .openBtn:hover {
   background: #bbb;
 }
-
 .overlay {
   height: 100%;
   width: 100%;
@@ -416,7 +409,6 @@ body {
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0, 0.9);
 }
-
 .overlay-content {
   position: relative;
   top: 46%;
@@ -425,7 +417,6 @@ body {
   margin-top: 30px;
   margin: auto;
 }
-
 .overlay .closebtn {
   position: absolute;
   top: 20px;
@@ -434,11 +425,9 @@ body {
   cursor: pointer;
   color: white;
 }
-
 .overlay .closebtn:hover {
   color: #ccc;
 }
-
 .overlay input[type=text] {
   padding: 15px;
   font-size: 17px;
@@ -447,11 +436,9 @@ body {
   width: 80%;
   background: white;
 }
-
 .overlay input[type=text]:hover {
   background: #f1f1f1;
 }
-
 .overlay button {
   float: left;
   width: 20%;
@@ -461,14 +448,12 @@ body {
   border: none;
   cursor: pointer;
 }
-
 .overlay button:hover {
   background: #bbb;
 }
 </style>
 </head>
 <body>
-
 <div id="myOverlay" class="overlay">
   <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
   <div class="overlay-content">
@@ -478,17 +463,14 @@ body {
     </form>
   </div>
 </div>
-
 <h2>Fullscreen Search</h2>
 <p>Click on the button to open the search box.</p>
 <button class="openBtn" onclick="openSearch()">Open Search Box</button>
-
 <script>
   
 function openSearch() {
   document.getElementById("myOverlay").style.display = "block";
 }
-
 function closeSearch() {
   document.getElementById("myOverlay").style.display = "none";
 }
@@ -496,8 +478,6 @@ function closeSearch() {
      
 body>
 html>
-
-
 */ 
 
 </script>

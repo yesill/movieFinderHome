@@ -32,12 +32,17 @@ class Arama():
             Aranan film ismi filmler listesinde aynen varsa(tami tamina ayni olmali) aranan filmi obje olarak returnler.
             Aranan film ismi filmler listesinde yoksa 'False' returnler.
         """
+        search_text = search_text.lower()
         for film in self.film_list:
             if search_text in film.name:
                 return film
         return False
     
     def searchGenre(self,genre):
+        """
+            Parametre olarak String alir.
+            Aranan turdeki filmleri bir listeye atar. Bu listeden bir filmi, film objesi olarak returnler.
+        """
         film_list = []
         for film in self.film_list:
             if genre in film.genre:
